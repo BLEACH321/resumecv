@@ -88,14 +88,14 @@ export default function App() {
         <div className="absolute inset-0 opacity-[0.03] mix-blend-overlay pointer-events-none bg-[url('data:image/svg+xml,%3Csvg viewBox=%220 0 200 200%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22noiseFilter%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.65%22 numOctaves=%223%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23noiseFilter)%22/%3E%3C/svg%3E')]"></div>
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto p-8 lg:p-16">
-        <div className="grid lg:grid-cols-[300px,1fr] gap-16">
+      <div className="relative z-10 max-w-7xl mx-auto p-6 sm:p-10 lg:p-16">
+        <div className="flex flex-col lg:grid lg:grid-cols-[300px,1fr] gap-12 lg:gap-16">
           {/* Left Sidebar - Contacts */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
-            className="space-y-6"
+            className="space-y-6 order-2 lg:order-1"
           >
             <div>
               <div className="flex items-center gap-4 mb-6">
@@ -148,16 +148,16 @@ export default function App() {
           </motion.div>
 
           {/* Main Content */}
-          <div className="space-y-16">
+          <div className="space-y-16 order-1 lg:order-2">
             {/* Header */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
-              <h1 className="text-5xl lg:text-8xl font-bold tracking-tight leading-tight mb-4 text-white">
+              <h1 className="text-4xl sm:text-6xl lg:text-8xl font-bold tracking-tight leading-tight mb-4 text-white">
                 Sunny Gupta <br />
-                <span className="bg-clip-text text-transparent bg-gradient-to-r from-emerald-400 via-amber-400 to-indigo-400 animate-gradient-x">
+                <span className="bg-clip-text text-transparent bg-gradient-to-r from-emerald-400 via-amber-400 to-indigo-400 animate-gradient-x block sm:inline">
                   Full Stack Developer
                 </span>
               </h1>
